@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
     <head>
         {% if title %}
         <title>{{title}} - miroblog</title>'
@@ -6,10 +6,13 @@
         <title>Welcome to microblog</title>
         {% endif %}
     </head>
-    <body>
+    <body> -->
+        {% extends "base.html" %}
+        {% block content %}
         <h1>Hello, {{user.nickname}}!</h1>
         {% for post in posts %}
         <p>{{post.author.nickname}} says: <b>{{post.body}}</b></p>
-        {% end for %}
-    </body>
-</html>
+        {% endfor %}
+        {% endblock %}
+<!--     </body>
+</html> -->
